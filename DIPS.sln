@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DIPS", "DIPS\DIPS.csproj", "{4D5E52C7-4628-49D6-BEA3-9C4D3E9ED46C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FaceBookDIPS", "..\..\..\..\New folder (3)\Facebooking\Facebooking\Authorization\FaceBookDIPS.csproj", "{64B6E912-863E-4572-A3B0-932A7E6B4A6D}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "DIPSSetup", "DIPSSetup\DIPSSetup.vdproj", "{D63C2E0E-36E6-4840-91C5-CFD0E36E358A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4D5E52C7-4628-49D6-BEA3-9C4D3E9ED46C}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{4D5E52C7-4628-49D6-BEA3-9C4D3E9ED46C}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{4D5E52C7-4628-49D6-BEA3-9C4D3E9ED46C}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{4D5E52C7-4628-49D6-BEA3-9C4D3E9ED46C}.Debug|x86.ActiveCfg = Debug|x86
+		{4D5E52C7-4628-49D6-BEA3-9C4D3E9ED46C}.Debug|x86.Build.0 = Debug|x86
+		{4D5E52C7-4628-49D6-BEA3-9C4D3E9ED46C}.Release|Any CPU.ActiveCfg = Release|x86
+		{4D5E52C7-4628-49D6-BEA3-9C4D3E9ED46C}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{4D5E52C7-4628-49D6-BEA3-9C4D3E9ED46C}.Release|Mixed Platforms.Build.0 = Release|x86
+		{4D5E52C7-4628-49D6-BEA3-9C4D3E9ED46C}.Release|x86.ActiveCfg = Release|x86
+		{4D5E52C7-4628-49D6-BEA3-9C4D3E9ED46C}.Release|x86.Build.0 = Release|x86
+		{64B6E912-863E-4572-A3B0-932A7E6B4A6D}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{64B6E912-863E-4572-A3B0-932A7E6B4A6D}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{64B6E912-863E-4572-A3B0-932A7E6B4A6D}.Debug|x86.ActiveCfg = Debug|x86
+		{64B6E912-863E-4572-A3B0-932A7E6B4A6D}.Debug|x86.Build.0 = Debug|x86
+		{64B6E912-863E-4572-A3B0-932A7E6B4A6D}.Release|Any CPU.ActiveCfg = Release|x86
+		{64B6E912-863E-4572-A3B0-932A7E6B4A6D}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{64B6E912-863E-4572-A3B0-932A7E6B4A6D}.Release|x86.ActiveCfg = Release|x86
+		{64B6E912-863E-4572-A3B0-932A7E6B4A6D}.Release|x86.Build.0 = Release|x86
+		{D63C2E0E-36E6-4840-91C5-CFD0E36E358A}.Debug|Any CPU.ActiveCfg = Debug
+		{D63C2E0E-36E6-4840-91C5-CFD0E36E358A}.Debug|Mixed Platforms.ActiveCfg = Debug
+		{D63C2E0E-36E6-4840-91C5-CFD0E36E358A}.Debug|x86.ActiveCfg = Debug
+		{D63C2E0E-36E6-4840-91C5-CFD0E36E358A}.Release|Any CPU.ActiveCfg = Release
+		{D63C2E0E-36E6-4840-91C5-CFD0E36E358A}.Release|Mixed Platforms.ActiveCfg = Release
+		{D63C2E0E-36E6-4840-91C5-CFD0E36E358A}.Release|x86.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

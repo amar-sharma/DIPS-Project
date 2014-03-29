@@ -1,0 +1,432 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4D5E52C7-4628-49D6-BEA3-9C4D3E9ED46C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DIPS</RootNamespace>
+    <AssemblyName>DIPS</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>main.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxInterop.WMPLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Resources\AxInterop.WMPLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Facebook, Version=6.0.10.0, Culture=neutral, PublicKeyToken=58cb4f2111d1e6de, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="RSS.NET">
+      <HintPath>Resources\RSS.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Thor.Units">
+      <HintPath>..\..\Final APIs\Unit converter\Thor.Units\bin\Debug\Thor.Units.dll</HintPath>
+    </Reference>
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Calculator\Calci.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Calculator\Calci.designer.cs">
+      <DependentUpon>Calci.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Calculator\Operations.cs" />
+    <Compile Include="Calender\Caln.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Calender\Caln.designer.cs">
+      <DependentUpon>Caln.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CurrencyConv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CurrencyConv.Designer.cs">
+      <DependentUpon>CurrencyConv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DIPSPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DIPSPanel.Designer.cs">
+      <DependentUpon>DIPSPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DIPSEncryption.cs" />
+    <Compile Include="FacebookDIPS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FacebookDIPS.Designer.cs">
+      <DependentUpon>FacebookDIPS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FBAuthorize.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FBAuthorize.Designer.cs">
+      <DependentUpon>FBAuthorize.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FeedBack\FeedBk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FeedBack\FeedBk.Designer.cs">
+      <DependentUpon>FeedBk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GoogleSearch\GoogleSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GoogleSearch\GoogleSearch.designer.cs">
+      <DependentUpon>GoogleSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Help\Helpme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Help\Helpme.designer.cs">
+      <DependentUpon>Helpme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainDIPS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainDIPS.Designer.cs">
+      <DependentUpon>MainDIPS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="News\News.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="News\IniDataReader.cs" />
+    <Compile Include="SlideShow\FullScreen.cs" />
+    <Compile Include="SlideShow\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SlideShow\MainForm.designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SlideShow\Settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SlideShow\Settings.designer.cs">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StickyNotes\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StickyNotes\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prefrences.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prefrences.Designer.cs">
+      <DependentUpon>Prefrences.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Locations.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Locations.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="Stocks\Stocks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stocks\Stocks.designer.cs">
+      <DependentUpon>Stocks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SudokuGame\DataGridSpinnerColumn.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SudokuGame\NewGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SudokuGame\NewGame.Designer.cs">
+      <DependentUpon>NewGame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SudokuGame\sudoku.cs" />
+    <Compile Include="SudokuGame\SudokuMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Twitter\Settings11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings1.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Twitter\TwitterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Twitter\TwitterForm.designer.cs">
+      <DependentUpon>TwitterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Twitter\TwitterFormSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Twitter\TwitterFormSettings.designer.cs">
+      <DependentUpon>TwitterFormSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Twitter\oAuth.cs" />
+    <Compile Include="Twitter\oAuthTwitter.cs" />
+    <Compile Include="Twitter\Settings.cs" />
+    <Compile Include="UnitConv\MainWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VideoPlayer\MediaPlayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VideoPlayer\MediaPlayer.Designer.cs">
+      <DependentUpon>MediaPlayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VideoPlayer\PlayerInit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VideoPlayer\PlayerInit.Designer.cs">
+      <DependentUpon>PlayerInit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Weather\WeatherPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Weather\WeatherPanel.designer.cs">
+      <DependentUpon>WeatherPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Weather\Weather.cs" />
+    <Compile Include="Youtube\AbortableBackgroundWorker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Youtube\downloadForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Youtube\downloadForm.designer.cs">
+      <DependentUpon>downloadForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Youtube\FileDownloader.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Youtube\FileSizeFormatProvider.cs" />
+    <Compile Include="Youtube\Helper.cs" />
+    <Compile Include="Youtube\Youtube.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Youtube\Youtube.designer.cs">
+      <DependentUpon>Youtube.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Youtube\YouTubeDownloader.cs" />
+    <EmbeddedResource Include="Calculator\Calci.resx">
+      <DependentUpon>Calci.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Calender\Caln.resx">
+      <DependentUpon>Caln.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DIPSPanel.resx">
+      <DependentUpon>DIPSPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FacebookDIPS.resx">
+      <DependentUpon>FacebookDIPS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FBAuthorize.resx">
+      <DependentUpon>FBAuthorize.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CurrencyConv.resx">
+      <DependentUpon>CurrencyConv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FeedBack\FeedBk.resx">
+      <DependentUpon>FeedBk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GoogleSearch\GoogleSearch.resx">
+      <DependentUpon>GoogleSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Help\Helpme.resx">
+      <DependentUpon>Helpme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainDIPS.resx">
+      <DependentUpon>MainDIPS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="News\News.resx">
+      <DependentUpon>News.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SlideShow\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SlideShow\Settings.resx">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StickyNotes\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prefrences.resx">
+      <DependentUpon>Prefrences.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stocks\Stocks.resx">
+      <DependentUpon>Stocks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SudokuGame\DataGridSpinnerColumn.resx">
+      <DependentUpon>DataGridSpinnerColumn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SudokuGame\NewGame.resx">
+      <DependentUpon>NewGame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SudokuGame\SudokuMainForm.resx">
+      <DependentUpon>SudokuMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Twitter\TwitterForm.resx">
+      <DependentUpon>TwitterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Twitter\TwitterFormSettings.resx">
+      <DependentUpon>TwitterFormSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UnitConv\MainWindow.resx">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VideoPlayer\MediaPlayer.resx">
+      <DependentUpon>MediaPlayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VideoPlayer\PlayerInit.resx">
+      <DependentUpon>PlayerInit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Weather\WeatherPanel.resx">
+      <DependentUpon>WeatherPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Weather\Weather.resx">
+      <DependentUpon>Weather.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Youtube\downloadForm.resx">
+      <DependentUpon>downloadForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Youtube\Youtube.resx">
+      <DependentUpon>Youtube.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Properties\Locations.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Locations.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Twitter\Settings1.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings11.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\127161-simple-black-square-icon-media-a-media22-arrow-forward11.png" />
+    <None Include="Images\Categories-system-help-icon.png" />
+    <None Include="Images\v65oai7fxn47qv9nectx.png" />
+    <None Include="Images\windows_media_player.png" />
+    <None Include="Images\Next.png" />
+    <None Include="Images\Prev.png" />
+    <None Include="Images\help.png" />
+    <None Include="Images\feedback.png" />
+    <None Include="Images\Prefrences.png" />
+    <None Include="Images\VideoP.png" />
+    <Content Include="main.ico" />
+    <None Include="Resources\main.png" />
+    <None Include="Images\search.png" />
+    <None Include="Images\refresh.png" />
+    <None Include="Images\Closeit.png" />
+    <None Include="bin\Debug\main.png" />
+    <None Include="Images\Google.png" />
+    <Content Include="Images\Jellyfish.jpg" />
+    <None Include="Resources\Web_Image.png" />
+    <None Include="Resources\About_Image.png" />
+    <None Include="Resources\App_Logo.png" />
+    <None Include="Resources\Image_Error.jpg" />
+    <None Include="Resources\Image_Wait.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\New folder %283%29\Facebooking\Facebooking\Authorization\FaceBook.csproj">
+      <Project>{64B6E912-863E-4572-A3B0-932A7E6B4A6D}</Project>
+      <Name>FaceBook</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="WECAPILib">
+      <Guid>{B8812619-BDB3-11D0-B19E-00A0C91E29D8}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

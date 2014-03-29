@@ -1,0 +1,489 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<!--
+		XML Unit definitions file
+
+		Rob Harwood
+		<robharwood@runbox.com>
+		=========================
+		
+		How to define a unit group
+		==========================
+		Simply add a pair of UnitGroup tags like so:
+		
+		<UnitGroup name="My Group"></UnitGroup>
+		
+		You can have as many unit group tags as you like.
+		
+		How to define a unit
+		====================
+		Units are defined with the <Unit> tag, you must specify a unit name with the "name"
+		attribute or the unit will not get loaded.
+		
+		e.g <Unit name="MyUnit">
+		
+		There are various properties units can have including:
+		
+		<PreAdd>		- Value added to the unit value before multiplication
+		<Add>			- Value added to the unit value after multiplication
+		<Multiply>	- Value multipled with the unit value.
+		<Symbol>		- Alternative symbols for the unit (e.g C - celcius, kg - kilograms etc)
+		
+		+ These properties must be modifiers that convert the unit into the standard unit.
+		
+		+ The standard unit can be anything you choose. You define it by giving it a modifier that
+		  doesn't effect the value, or no modifier at all. For example in the temperature section, Kelvin
+		  is the base unit (as its only modifier is a multiply by 1). This means that all the other
+		  values in the tempoerature section must have modifiers that convert them into Kelvin.
+		
+		+ You can make a symbol the default by adding the "default" attribute to a symbol tag.
+		  If you do not set a default, the unit engine uses the full name of the unit as the default symbol.
+		
+		+ Each unit can have as many symbols associated with it as you like.
+		
+		+ Each unit _must_ appear within a unit group.
+		
+-->
+<UnitFile name="Default" version="1.00">
+
+	<!-- Temperature section -->
+	<UnitGroup name="Temperature">
+		<Unit name="Kelvin">
+			<Symbol default="true">K</Symbol>
+			<Multiply>1</Multiply>
+		</Unit>
+		
+		<Unit name="Celcius">
+			<Symbol default="true">C</Symbol>
+			<Add>273.15</Add>
+		</Unit>
+		
+		<Unit name="Centigrade">
+			<Add>273.15</Add>
+		</Unit>
+		
+		<Unit name="Fahrenheit">
+			<Symbol default="true">F</Symbol>
+			<PreAdd>-32</PreAdd>
+			<Multiply>1.8^-1</Multiply>
+			<Add>273.15</Add>
+		</Unit>
+		
+		<Unit name="Millikelvin">
+			<Symbol default="true">mK</Symbol>
+			<Multiply>0.001</Multiply>
+		</Unit>
+		
+		<Unit name="Microkelvin">
+			<Symbol default="true">µK</Symbol>
+			<Symbol>uK</Symbol>
+			<Multiply>1e-006</Multiply>
+		</Unit>
+		
+		<Unit name="Nanokelvin">
+			<Symbol default="true">nK</Symbol>
+			<Multiply>1e-009</Multiply>
+		</Unit>
+		
+		<Unit name="Kilokelvin">
+			<Symbol default="true">kK</Symbol>
+			<Multiply>1000</Multiply>
+		</Unit>
+		
+		<Unit name="Megakelvin">
+			<Symbol default="true">MK</Symbol>
+			<Multiply>1000000</Multiply>
+		</Unit>
+		
+		<Unit name="Reaumur">
+			<Symbol default="true">R</Symbol>
+			<Multiply>0.555555555555556</Multiply>
+		</Unit>
+	</UnitGroup>
+	
+	<!-- Mass section -->
+	<UnitGroup name="Mass">
+		<Unit name="Kilogram">
+			<Symbol default="true">kg</Symbol>
+			<Multiply>1</Multiply>
+		</Unit>
+		
+		<Unit name="Gram">
+			<Symbol default="true">g</Symbol>
+			<Multiply>0.001</Multiply>
+		</Unit>
+		
+		<Unit name="Milligram">
+			<Symbol default="true">mg</Symbol>
+			<Multiply>1e-006</Multiply>
+		</Unit>
+		
+		<Unit name="Microgram">
+			<Symbol default="true">µg</Symbol>
+			<Symbol>ug</Symbol>
+			<Multiply>1e-009</Multiply>
+		</Unit>
+		
+		<Unit name="Nanogram">
+			<Symbol default="true">ng</Symbol>
+			<Multiply>1e-012</Multiply>
+		</Unit>
+		
+		<Unit name="Megagram">
+			<Symbol default="true">Mg</Symbol>
+			<Multiply>1000</Multiply>
+		</Unit>
+		
+		<Unit name="Gigagram">
+			<Symbol default="true">Gg</Symbol>
+			<Multiply>1000000</Multiply>
+		</Unit>
+		
+		<Unit name="Tonne">
+			<Symbol default="true">t</Symbol>
+			<Multiply>1000</Multiply>
+		</Unit>
+		
+		<Unit name="Ton">
+			<Multiply>907.18474</Multiply>
+		</Unit>
+		
+		<Unit name="Stone">
+			<Multiply>6.35029318</Multiply>
+		</Unit>
+		
+		<Unit name="USton">
+			<Multiply>907.1847399</Multiply>
+		</Unit>
+		
+		<Unit name="CWT">
+			<Multiply>50.80234544</Multiply>
+		</Unit>
+		
+		<Unit name="Pound">
+			<Symbol default="true">lb</Symbol>
+			<Multiply>2.2^-1</Multiply>
+		</Unit>
+		
+		<Unit name="Ounce">
+			<Symbol default="true">oz</Symbol>
+			<Multiply>35^-1</Multiply>
+		</Unit>		
+	</UnitGroup>
+	
+	<!-- Time section -->
+	<UnitGroup name="Time">
+		<Unit name="Second">
+			<Symbol default="true">s</Symbol>
+			<Symbol>sec</Symbol>
+			<Multiply>1</Multiply>
+		</Unit>
+		
+		<Unit name="Minute">
+			<Symbol default="true">min</Symbol>
+			<Multiply>60</Multiply>
+		</Unit>
+		
+		<Unit name="Hour">
+			<Symbol default="true">hr</Symbol>
+			<Symbol>h</Symbol>
+			<Multiply>3600</Multiply>
+		</Unit>
+
+		<Unit name="Kilosecond">
+			<Symbol default="true">ks</Symbol>
+			<Multiply>1000</Multiply>
+		</Unit>		
+	</UnitGroup>
+	
+	<!-- Forces section -->
+	<UnitGroup name="Force">
+		<Unit name="Newton">
+			<Symbol default="true">N</Symbol>
+			<Multiply>1</Multiply>
+		</Unit>
+		
+		<Unit name="Dyne">
+			<Symbol default="true">dyn</Symbol>
+			<Multiply>1e-005</Multiply>
+		</Unit>
+		
+		<Unit name="Pounds force">
+			<Symbol default="true">lbf</Symbol>
+			<Multiply>0.004448221615</Multiply>
+		</Unit>
+		
+		<Unit name="Tons force">
+			<Symbol default="true">tonf</Symbol>
+			<Multiply>9964.0164161</Multiply>
+		</Unit>
+		
+		<Unit name="Tonnes force">
+			<Symbol default="true">tonnef</Symbol>
+			<Multiply>9806.65</Multiply>
+		</Unit>
+		
+		<Unit name="Meganewton">
+			<Symbol default="true">MN</Symbol>
+			<Multiply>1000000</Multiply>
+		</Unit>
+		
+		<Unit name="Giganewton">
+			<Symbol default="true">GN</Symbol>
+			<Multiply>1000000000</Multiply>
+		</Unit>
+		
+		<Unit name="Kilonewton">
+			<Symbol default="true">kN</Symbol>
+			<Multiply>1000</Multiply>
+		</Unit>
+		
+		<Unit name="Millinewton">
+			<Symbol default="true">mN</Symbol>
+			<Multiply>0.001</Multiply>
+		</Unit>
+		
+		<Unit name="Micronewton">
+			<Symbol default="true">µN</Symbol>
+			<Symbol>uN</Symbol>
+			<Multiply>1e-006</Multiply>
+		</Unit>
+		
+		<Unit name="Nanonewton">
+			<Symbol default="true">nN</Symbol>
+			<Multiply>1e-009</Multiply>
+		</Unit>
+	</UnitGroup>
+
+	<!-- Momentum section -->
+	<UnitGroup name="Momentum">
+		<Unit name="Kilogram metres per second">
+			<Symbol default="true">kg.m/s</Symbol>
+			<Multiply>1</Multiply>
+		</Unit>
+		
+		<Unit name="Pound feet per hour">
+			<Symbol default="true">lb.ft/hr</Symbol>
+			<Multiply>1</Multiply>
+		</Unit>
+	</UnitGroup>
+	
+	<!-- Speed section -->
+	<UnitGroup name="Speed">
+		<Unit name="Metres per second">
+			<Symbol default="true">m/s</Symbol>
+			<Multiply>1</Multiply>
+		</Unit>
+		
+		<Unit name="Kilometres per hour">
+			<Symbol default="true">kph</Symbol>
+			<Multiply>0.2777777777778</Multiply>
+		</Unit>
+		
+		<Unit name="Miles per hour">
+			<Symbol default="true">mph</Symbol>
+			<Multiply>0.44704</Multiply>
+		</Unit>
+		
+		<Unit name="Metres per minute">
+			<Symbol default="true">m/min</Symbol>
+			<Multiply>60^-1</Multiply>
+		</Unit>
+		
+		<Unit name="Feet per second">
+			<Symbol default="true">ft/s</Symbol>
+			<Multiply>0.3048</Multiply>
+		</Unit>
+	</UnitGroup>
+	
+	<!-- Length section -->
+	<UnitGroup name="Length">
+		<Unit name="Metre">
+			<Symbol default="true">m</Symbol>
+			<Multiply>1</Multiply>
+		</Unit>
+		
+		<Unit name="Yard">
+			<Symbol>yd</Symbol>
+			<Multiply>0.9144</Multiply>
+		</Unit>
+		
+		<Unit name="Feet">
+			<Symbol default="true">ft</Symbol>
+			<Symbol>'</Symbol>
+			<Multiply>0.3048</Multiply>
+		</Unit>
+		
+		<Unit name="Chain">
+			<Multiply>20.1168</Multiply>
+		</Unit>
+		
+		<Unit name="Mile">
+			<Multiply>1609.344</Multiply>
+		</Unit>
+		
+		<Unit name="Kilometre">
+		<Symbol default="true">km</Symbol>
+			<Multiply>1000</Multiply>
+		</Unit>
+		
+		<Unit name="Megametre">
+		<Symbol default="true">Mm</Symbol>
+			<Multiply>1000000</Multiply>
+		</Unit>
+		
+		<Unit name="Gigametre">
+		<Symbol default="true">Gm</Symbol>
+			<Multiply>1000000000</Multiply>
+		</Unit>
+		
+		<Unit name="Furlong">
+			<Multiply>201.168</Multiply>
+		</Unit>
+		
+		<!-- Units below here represent the smaller length units -->
+		<Unit name="Thou">
+			<Multiply>2.54e-005</Multiply>
+		</Unit>
+
+		<Unit name="Micron">
+			<Symbol default="true">µm</Symbol>
+			<Symbol>um</Symbol>
+			<Multiply>1e-006</Multiply>
+		</Unit>
+		
+		<Unit name="Inch">
+			<Symbol default="true">in</Symbol>
+			<Symbol>"</Symbol>
+			<Multiply>0.0254</Multiply>
+		</Unit>
+		
+		<Unit name="Centimetre">
+			<Symbol default="true">cm</Symbol>
+			<Multiply>0.01</Multiply>
+		</Unit>
+		
+		<Unit name="Millimetre">
+			<Symbol default="true">mm</Symbol>
+			<Multiply>0.001</Multiply>
+		</Unit>
+	</UnitGroup>
+	
+	<!-- Power section -->
+	<UnitGroup name="Power">
+		<Unit name="Watt">
+			<Symbol default="true">W</Symbol>
+			<Multiply>1</Multiply>
+		</Unit>
+		
+		<Unit name="Horsepower">
+			<Symbol default="true">hp</Symbol>
+			<Multiply>745.69987</Multiply>
+		</Unit>
+		
+		<Unit name="Megawatt">
+			<Symbol default="true">MW</Symbol>
+			<Multiply>1000000</Multiply>
+		</Unit>
+		
+		<Unit name="Kilowatt">
+			<Symbol default="true">kW</Symbol>
+			<Multiply>1000</Multiply>
+		</Unit>
+		
+		<Unit name="Microwatt">
+			<Symbol default="true">µW</Symbol>
+			<Symbol>uW</Symbol>
+			<Multiply>1e-006</Multiply>
+		</Unit>
+		
+		<Unit name="Nanowatt">
+			<Symbol default="true">nW</Symbol>
+			<Multiply>1e-009</Multiply>
+		</Unit>
+		
+		<Unit name="Milliwatt">
+			<Symbol default="true">mW</Symbol>
+			<Multiply>0.001</Multiply>
+		</Unit>
+	</UnitGroup>
+	
+	<!-- Energy section -->
+	<UnitGroup name="Energy">
+		<Unit name="Joule">
+			<Symbol default="true">J</Symbol>
+			<Multiply>1</Multiply>
+		</Unit>
+		
+		<Unit name="Erg">
+			<Multiply>1e-007</Multiply>
+		</Unit>
+		
+		<Unit name="Calorie">
+			<Symbol default="true">cal</Symbol>
+			<Multiply>4.1868</Multiply>
+		</Unit>
+		
+		<Unit name="British thermal unit">
+			<Symbol default="true">Btu</Symbol>
+			<Multiply>1055.05585</Multiply>
+		</Unit>
+		
+		<Unit name="Therm">
+			<Multiply>105505585000</Multiply>
+		</Unit>
+		
+		<Unit name="Millijoule">
+			<Symbol default="true">mJ</Symbol>
+			<Multiply>0.001</Multiply>
+		</Unit>
+		
+		<Unit name="Megajoule">
+			<Symbol default="true">MJ</Symbol>
+			<Multiply>1000000</Multiply>
+		</Unit>
+		
+		<Unit name="Kilojoule">
+			<Symbol default="true">kJ</Symbol>
+			<Multiply>1000</Multiply>
+		</Unit>
+		
+		<Unit name="Gigajoule">
+			<Symbol default="true">GJ</Symbol>
+			<Multiply>1000000000</Multiply>
+		</Unit>
+		
+		<Unit name="Microjoule">
+			<Symbol default="true">µJ</Symbol>
+			<Symbol>uJ</Symbol>
+			<Multiply>1e-006</Multiply>
+		</Unit>
+		
+		<Unit name="Nanojoule">
+			<Symbol default="true">nJ</Symbol>
+			<Multiply>1e-009</Multiply>
+		</Unit>
+	</UnitGroup>
+	
+	<!-- Plane Angle section -->
+	<UnitGroup name="Plane Angle">
+		<Unit name="Radian">
+			<Symbol default="true">rad</Symbol>
+			<Multiply>1</Multiply>
+		</Unit>
+		
+		<Unit name="Degree">
+			<Symbol default="true">deg</Symbol>
+			<Multiply>0.01745329251994</Multiply>
+		</Unit>
+		
+		<Unit name="Gradian">
+			<Symbol default="true">grad</Symbol>
+			<Add>0.01570796326795</Add>
+		</Unit>
+		
+		<Unit name="Rev">
+			<Multiply>6.28318530718</Multiply>
+		</Unit>
+	</UnitGroup>
+
+</UnitFile>
