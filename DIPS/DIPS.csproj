@@ -68,7 +68,7 @@
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Thor.Units">
-      <HintPath>..\..\Final APIs\Unit converter\Thor.Units\bin\Debug\Thor.Units.dll</HintPath>
+      <HintPath>bin\Debug\Thor.Units.dll</HintPath>
     </Reference>
     <Reference Include="UIAutomationProvider" />
     <Reference Include="WindowsBase" />

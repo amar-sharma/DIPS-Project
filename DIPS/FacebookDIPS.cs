@@ -206,6 +206,9 @@ namespace DIPS
             if (!Properties.Settings.Default.hasAuthorized)
             {
                 MessageBox.Show(" You need to authorize first !!");
+                FBAuthorize fbauth;
+                fbauth = new FBAuthorize();
+                fbauth.Show();
                 return;
             }
             if (!Clicked)

@@ -41,7 +41,7 @@
             this.webBrowser.Location = new System.Drawing.Point(12, 153);
             this.webBrowser.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser.Name = "webBrowser";
-            this.webBrowser.Size = new System.Drawing.Size(880, 378);
+            this.webBrowser.Size = new System.Drawing.Size(880, 535);
             this.webBrowser.TabIndex = 1;
             // 
             // pictureBox2
@@ -67,7 +67,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(892, 532);
+            this.ClientSize = new System.Drawing.Size(892, 700);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.webBrowser);
             this.Controls.Add(this.pictureBox1);

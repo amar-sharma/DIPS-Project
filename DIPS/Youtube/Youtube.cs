@@ -18,7 +18,7 @@ namespace DIPS.Youtube
         {
             InitializeComponent();
             timer1.Enabled = true;
-            this.Width = 50;
+            this.Width = 48;
             this.Height = 137;
             backgroundWorker1.WorkerSupportsCancellation = true;
             backgroundWorker1.Disposed += new EventHandler(backgroundWorker1_Disposed);

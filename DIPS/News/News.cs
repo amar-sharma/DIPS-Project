@@ -217,14 +217,14 @@ namespace DIPS.News
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(741, 16);
+            this.panel1.Size = new System.Drawing.Size(737, 28);
             this.panel1.TabIndex = 2;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::DIPS.Properties.Resources.refresh;
-            this.pictureBox1.Location = new System.Drawing.Point(720, -1);
+            this.pictureBox1.Location = new System.Drawing.Point(711, 1);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(26, 27);
             this.pictureBox1.TabIndex = 3;
@@ -238,7 +238,7 @@ namespace DIPS.News
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.Location = new System.Drawing.Point(0, 0);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(25, 16);
+            this.button1.Size = new System.Drawing.Size(25, 28);
             this.button1.TabIndex = 2;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -246,7 +246,7 @@ namespace DIPS.News
             // Form1
             // 
             this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
-            this.ClientSize = new System.Drawing.Size(741, 16);
+            this.ClientSize = new System.Drawing.Size(737, 28);
             this.ControlBox = false;
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.textBox1);
